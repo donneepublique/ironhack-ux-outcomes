@@ -12,6 +12,12 @@ data/report.json
 # (in provenance/manifest.json) and the no-PII header/witness files.
 capture/**/*.body.json
 
+# All-tracks RAW DATA + per-track findings — kept PRIVATE for now (not published).
+# The tamper-evidence PROOF (provenance_all/) and the scripts ARE committed, so the
+# capture is publicly time-anchored even though the underlying data stays private.
+capture_all/
+data_all/
+
 # junk
 __pycache__/
 .DS_Store

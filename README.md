@@ -1,5 +1,7 @@
 # Does an Ironhack UX/UI bootcamp make you a "high‑paid UX designer"?
 
+🌍 **English** · [Français](README.fr.md) · [Deutsch](README.de.md) · [Português](README.pt.md)
+
 **A data look at the outcomes Ironhack itself publishes.**
 
 Ironhack sells its UX/UI bootcamp on placement: *"~90% of job‑seeking graduates placed within 6 months"* (PwC‑audited), *"96% graduation rate"*, salary messaging built around a UX/UI career. This repository checks that promise against **Ironhack's own alumni‑portal directory** — the internal networking/hiring directory that logged‑in alumni see on `my.ironhack.com`, covering every UX/UI graduate across all 10 campuses — and finds a very different picture.
@@ -85,22 +87,25 @@ This is the part the single headline hides. Splitting by graduation year shows t
 
 ![Outcomes by graduation year: hired-as-a-designer falls from 37% (2021) to 18% (2023) to 12% (2024), while never-placed climbs from 13% to 92%; the two series cross between 2022 and 2023.](assets/04_by_year.png)
 
+Newest cohorts first:
+
 | Year | n | Hired in‑field | Not as designer | Freelance | Never placed | Left field | Incomplete | Internship |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 2020 | 71 | 19.7% | 22.5% | 8.5% | 12.7% | 32.4% | 4.2% | 0.0% |
-| 2021 | 100 | **37.0%** | 12.0% | 10.0% | 20.0% | 14.0% | 1.0% | 6.0% |
-| 2022 | 420 | 32.4% | 9.5% | 7.9% | 32.4% | 7.4% | 4.5% | 6.0% |
-| 2023 | 761 | 18.0% | 11.4% | 7.9% | 46.6% | 6.2% | 5.8% | 4.1% |
-| 2024 | 394 | 12.4% | 8.1% | 2.5% | 62.7% | 3.8% | 5.6% | 4.8% |
-| 2025 | 160 | 8.1% | 7.5% | 3.1% | 74.4% | 3.1% | 1.2% | 2.5% |
 | 2026 | 74 | 0.0% | 4.1% | 1.4% | 91.9% | 1.4% | 0.0% | 1.4% |
+| 2025 | 160 | 8.1% | 7.5% | 3.1% | 74.4% | 3.1% | 1.2% | 2.5% |
+| 2024 | 394 | 12.4% | 8.1% | 2.5% | 62.7% | 3.8% | 5.6% | 4.8% |
+| 2023 | 761 | 18.0% | 11.4% | 7.9% | 46.6% | 6.2% | 5.8% | 4.1% |
+| 2022 | 420 | 32.4% | 9.5% | 7.9% | 32.4% | 7.4% | 4.5% | 6.0% |
+| 2021 | 100 | **37.0%** | 12.0% | 10.0% | 20.0% | 14.0% | 1.0% | 6.0% |
+| 2020 | 71 | 19.7% | 22.5% | 8.5% | 12.7% | 32.4% | 4.2% | 0.0% |
+| *2019* | *13* | *0.0%* | *23.1%* | *7.7%* | *15.4%* | *53.8%* | *0.0%* | *0.0%* |
 
 Two things are happening at once, and both matter:
 
 - **Recency** inflates "never placed" for **2025–2026** (those grads have barely had time to land a role) — so don't read too much into the last two bars.
 - But the **decline is real and predates recency.** The **2023 cohort (n=761)** graduated 1.5–3 years ago — ample time — and still only **18%** are hired in‑field, with **47% never placed.** The **2022** peak (32%) already halved by 2023. This tracks the well‑documented 2023+ contraction in the junior‑designer job market: a bootcamp certificate that may have worked in 2021 stopped working.
 
-*(Two non‑real "years" — 133 placeholder‑dated `1987` records and 13 records from `2019` — are excluded from the chart; see [data quality](#data-quality-notes).)*
+*(Table is newest‑first. `2019` (n=13, italic) is shown but too small to weight; the 133 placeholder‑dated `1987` records are a missing‑date artefact, not a real cohort — both are excluded from the chart above. See [data quality](#data-quality-notes).)*
 
 ## 4. Outcomes by campus
 
@@ -252,6 +257,7 @@ python3 make_charts.py     # -> assets/*.png
 
 - The source is **Ironhack's own alumni‑portal directory**, accessed with an alumni login — Ironhack's internal system of record, not a public page.
 - **Nothing identifying is republished.** All published outputs are **aggregate and anonymous** counts. Raw per‑person data (names, LinkedIn URLs, photos) is **git‑ignored** and never leaves the analyst's machine. The purpose is the public interest of prospective students weighing the bootcamp's marketing claims against its own recorded outcomes.
+- **Verification on request.** The underlying raw capture — hashed and RFC 3161‑timestamped (see [PROVENANCE.md](PROVENANCE.md)) — **can be provided on request to legitimate funding or oversight bodies** (e.g. public training funders) for independent verification.
 - Status labels are **Ironhack's own**, taken at face value. This is a comparison between a marketing impression and the typical documented outcome — not an allegation of fraud. See *Limitations* and *Data quality notes* above.
 
 ## License
