@@ -71,7 +71,7 @@ def chart(track, per_year):
     ax.set_ylabel("% of that year's graduates", fontsize=9.5, color=INK2)
     for xi in x:
         for off, arr in [(-w / 2, infield), (w / 2, never)]:
-            ax.text(xi + off, arr[xi] + max(infield + never + [1]) * 0.012, f"{arr[xi]:.0f}",
+            ax.text(xi + off, arr[xi] + max(infield + never + [1]) * 0.012, f"{arr[xi]:.0f}%",
                     ha="center", va="bottom", fontsize=8.5, color=INK, fontweight="bold")
     ax.legend(loc="upper left", frameon=False, fontsize=10)
     fig.suptitle(f"{NAME[track]} — outcomes by graduation year (Ironhack's own data)",
