@@ -25,7 +25,7 @@
 
 A Ironhack passou de algumas centenas de diplomados por ano para **milhares** — e no mesmo período, a fração efetivamente contratada *na área* caiu de ~35% para ~11%.
 
-![Diplomados por ano nas 6 formações da Ironhack, por resultado: a coorte cresce ~10×, de 235 (2020) para 2552 (2023), enquanto a fração contratada na área cai de 35% para 12% e a fração nunca colocada dispara.](assets/scale_vs_placement.png)
+![Diplomados por ano nas 6 formações da Ironhack, por resultado: a coorte cresce ~10×, de 235 (2020) para 2552 (2023), enquanto a fração contratada na área cai de 35% para 12% e a fração nunca colocada dispara.](assets/pt/scale_vs_placement.png)
 
 | Ano de conclusão | Diplomados (6 formações) | Contratados na área | Nunca colocados / à procura |
 |---|---:|---:|---:|
@@ -47,37 +47,37 @@ Em **≈7700 diplomados nas 6 formações**, o padrão repete-se em todo o lado.
 
 ## Desenvolvimento web
 
-![Resultados de Desenvolvimento web por ano: contratado como developer cai de 36% (2021) para 14% (2025), nunca colocado sobe para 57%.](assets/tracks/wd_by_year.png)
+![Resultados de Desenvolvimento web por ano: contratado como developer cai de 36% (2021) para 14% (2025), nunca colocado sobe para 57%.](assets/pt/tracks/wd_by_year.png)
 
 **2832 diplomados.** Contratados como developer na área: 2021 **36%** → 2022 32% → 2023 21% → 2024 15% → **2025 14%**, com **44–57%** das duas últimas coortes nunca colocadas.
 
 ## UX/UI Design
 
-![Resultados de UX/UI por ano: contratado como designer cai de 37% (2021) para 8% (2025), nunca colocado sobe para 74%.](assets/tracks/ux_by_year.png)
+![Resultados de UX/UI por ano: contratado como designer cai de 37% (2021) para 8% (2025), nunca colocado sobe para 74%.](assets/pt/tracks/ux_by_year.png)
 
 **2126 diplomados.** Contratados como designer: 2021 **37%** → 2023 18% → 2024 12% → **2025 8%**, com **63–74%** das coortes recentes nunca colocadas. É também a formação com o detalhe mais fino por campus — o campus remoto (o maior) é o mais fraco.
 
 ## Data Analytics
 
-![Resultados de Data Analytics por ano: contratado como analista cai de 40% (2022) para 13% (2025), nunca colocado 65%.](assets/tracks/da_by_year.png)
+![Resultados de Data Analytics por ano: contratado como analista cai de 40% (2022) para 13% (2025), nunca colocado 65%.](assets/pt/tracks/da_by_year.png)
 
 **1954 diplomados.** A formação *mais forte* da Ironhack — e mesmo assim em colapso: 2022 **40%** → 2023 28% → 2024 20% → **2025 13%** (65% nunca colocados).
 
 ## Cibersegurança
 
-![Resultados de Cibersegurança por ano: contratado na área cai de 35% (2022) para 10% (2025), nunca colocado 72%.](assets/tracks/cy_by_year.png)
+![Resultados de Cibersegurança por ano: contratado na área cai de 35% (2022) para 10% (2025), nunca colocado 72%.](assets/pt/tracks/cy_by_year.png)
 
 **505 diplomados.** 2022 35% → 2023 16% → 2024 14% → **2025 10%** na área, com **57–72%** das coortes recentes nunca colocadas.
 
 ## AI Engineering
 
-![Resultados de AI Engineering por ano: turma de 2025 com 14% na área, 60% nunca colocados.](assets/tracks/ai_by_year.png)
+![Resultados de AI Engineering por ano: turma de 2025 com 14% na área, 60% nunca colocados.](assets/pt/tracks/ai_by_year.png)
 
 **139 diplomados** (a formação mais recente e cara). **Turma de 2025: 14% contratados na área, 60% nunca colocados** (n=76). Lançada exatamente quando o mercado virou.
 
 ## Data Science & ML
 
-![Resultados de Data Science & ML por ano: turma de 2025 com 13% na área, 52% nunca colocados.](assets/tracks/ml_by_year.png)
+![Resultados de Data Science & ML por ano: turma de 2025 com 13% na área, 52% nunca colocados.](assets/pt/tracks/ml_by_year.png)
 
 **151 diplomados.** **Turma de 2025: 13% na área, 52% nunca colocados** (n=75) — a taxa mais baixa de todas as formações.
 

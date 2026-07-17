@@ -25,7 +25,7 @@
 
 Ironhack est passé de quelques centaines de diplômés par an à des **milliers** — et sur la même période, la part réellement recrutée *dans le domaine* est tombée de ~35 % à ~11 %.
 
-![Diplômés par an sur les 6 formations Ironhack, par résultat : la promotion grossit ×10, de 235 (2020) à 2 552 (2023), tandis que la part recrutée dans le domaine chute de 35 % à 12 % et que la part jamais placée explose.](assets/scale_vs_placement.png)
+![Diplômés par an sur les 6 formations Ironhack, par résultat : la promotion grossit ×10, de 235 (2020) à 2 552 (2023), tandis que la part recrutée dans le domaine chute de 35 % à 12 % et que la part jamais placée explose.](assets/fr/scale_vs_placement.png)
 
 | Année de diplôme | Diplômés (6 formations) | Recrutés dans le domaine | Jamais placés / en recherche |
 |---|---:|---:|---:|
@@ -47,37 +47,37 @@ Sur **≈7 700 diplômés des 6 formations**, le schéma se répète partout. Pa
 
 ## Développement web
 
-![Résultats Développement web par année : recruté comme développeur passe de 36 % (2021) à 14 % (2025), jamais placé monte à 57 %.](assets/tracks/wd_by_year.png)
+![Résultats Développement web par année : recruté comme développeur passe de 36 % (2021) à 14 % (2025), jamais placé monte à 57 %.](assets/fr/tracks/wd_by_year.png)
 
 **2 832 diplômés.** Recrutés comme développeur dans le domaine : 2021 **36 %** → 2022 32 % → 2023 21 % → 2024 15 % → **2025 14 %**, avec **44–57 %** des deux dernières promotions jamais placées.
 
 ## UX/UI Design
 
-![Résultats UX/UI par année : recruté comme designer passe de 37 % (2021) à 8 % (2025), jamais placé monte à 74 %.](assets/tracks/ux_by_year.png)
+![Résultats UX/UI par année : recruté comme designer passe de 37 % (2021) à 8 % (2025), jamais placé monte à 74 %.](assets/fr/tracks/ux_by_year.png)
 
 **2 126 diplômés.** Recrutés comme designer : 2021 **37 %** → 2023 18 % → 2024 12 % → **2025 8 %**, avec **63–74 %** des promotions récentes jamais placées. C'est aussi la formation au détail le plus fin par campus — le campus à distance (le plus gros) est le plus faible.
 
 ## Data Analytics
 
-![Résultats Data Analytics par année : recruté comme analyste passe de 40 % (2022) à 13 % (2025), jamais placé monte à 65 %.](assets/tracks/da_by_year.png)
+![Résultats Data Analytics par année : recruté comme analyste passe de 40 % (2022) à 13 % (2025), jamais placé monte à 65 %.](assets/fr/tracks/da_by_year.png)
 
 **1 954 diplômés.** La formation la *plus solide* d'Ironhack — et elle s'effondre quand même : 2022 **40 %** → 2023 28 % → 2024 20 % → **2025 13 %** (65 % jamais placés).
 
 ## Cybersécurité
 
-![Résultats Cybersécurité par année : recruté dans le domaine passe de 35 % (2022) à 10 % (2025), jamais placé 72 %.](assets/tracks/cy_by_year.png)
+![Résultats Cybersécurité par année : recruté dans le domaine passe de 35 % (2022) à 10 % (2025), jamais placé 72 %.](assets/fr/tracks/cy_by_year.png)
 
 **505 diplômés.** 2022 35 % → 2023 16 % → 2024 14 % → **2025 10 %** recrutés dans le domaine, avec **57–72 %** des promotions récentes jamais placées.
 
 ## AI Engineering
 
-![Résultats AI Engineering par année : promotion 2025 à 14 % recrutés dans le domaine, 60 % jamais placés.](assets/tracks/ai_by_year.png)
+![Résultats AI Engineering par année : promotion 2025 à 14 % recrutés dans le domaine, 60 % jamais placés.](assets/fr/tracks/ai_by_year.png)
 
 **139 diplômés** (formation la plus récente et la plus chère). **Promotion 2025 : 14 % recrutés dans le domaine, 60 % jamais placés** (n=76). Lancée pile quand le marché s'est retourné.
 
 ## Data Science & ML
 
-![Résultats Data Science & ML par année : promotion 2025 à 13 % recrutés dans le domaine, 52 % jamais placés.](assets/tracks/ml_by_year.png)
+![Résultats Data Science & ML par année : promotion 2025 à 13 % recrutés dans le domaine, 52 % jamais placés.](assets/fr/tracks/ml_by_year.png)
 
 **151 diplômés.** **Promotion 2025 : 13 % recrutés dans le domaine, 52 % jamais placés** (n=75) — le plus faible taux d'insertion de toutes les formations.
 

@@ -25,7 +25,7 @@
 
 Ironhack wuchs von einigen Hundert Absolventen pro Jahr auf **Tausende** — und im selben Zeitraum fiel der tatsächlich *im Fachgebiet* eingestellte Anteil von ~35 % auf ~11 %.
 
-![Absolventen pro Jahr über alle 6 Ironhack-Tracks, nach Ergebnis: die Kohorte wächst ~10×, von 235 (2020) auf 2.552 (2023), während der im Fachgebiet eingestellte Anteil von 35 % auf 12 % fällt und der nie-vermittelt-Anteil explodiert.](assets/scale_vs_placement.png)
+![Absolventen pro Jahr über alle 6 Ironhack-Tracks, nach Ergebnis: die Kohorte wächst ~10×, von 235 (2020) auf 2.552 (2023), während der im Fachgebiet eingestellte Anteil von 35 % auf 12 % fällt und der nie-vermittelt-Anteil explodiert.](assets/de/scale_vs_placement.png)
 
 | Abschlussjahr | Absolventen (6 Tracks) | Im Fachgebiet eingestellt | Nie vermittelt / auf Suche |
 |---|---:|---:|---:|
@@ -47,37 +47,37 @@ Die größten je eingeschriebenen Kohorten haben also die schlechtesten Ergebnis
 
 ## Webentwicklung
 
-![Webentwicklung-Ergebnisse nach Abschlussjahr: als Entwickler eingestellt fällt von 36 % (2021) auf 14 % (2025), nie vermittelt steigt auf 57 %.](assets/tracks/wd_by_year.png)
+![Webentwicklung-Ergebnisse nach Abschlussjahr: als Entwickler eingestellt fällt von 36 % (2021) auf 14 % (2025), nie vermittelt steigt auf 57 %.](assets/de/tracks/wd_by_year.png)
 
 **2.832 Absolventen.** Als Entwickler im Fachgebiet eingestellt: 2021 **36 %** → 2022 32 % → 2023 21 % → 2024 15 % → **2025 14 %**, mit **44–57 %** der letzten zwei Kohorten nie vermittelt.
 
 ## UX/UI Design
 
-![UX/UI-Ergebnisse nach Jahr: als Designer eingestellt fällt von 37 % (2021) auf 8 % (2025), nie vermittelt steigt auf 74 %.](assets/tracks/ux_by_year.png)
+![UX/UI-Ergebnisse nach Jahr: als Designer eingestellt fällt von 37 % (2021) auf 8 % (2025), nie vermittelt steigt auf 74 %.](assets/de/tracks/ux_by_year.png)
 
 **2.126 Absolventen.** Als Designer eingestellt: 2021 **37 %** → 2023 18 % → 2024 12 % → **2025 8 %**, mit **63–74 %** der jüngsten Kohorten nie vermittelt. Auch der Track mit der detailliertesten Aufschlüsselung pro Standort — Remote (größte Kohorte) ist der schwächste.
 
 ## Data Analytics
 
-![Data-Analytics-Ergebnisse nach Jahr: als Analyst eingestellt fällt von 40 % (2022) auf 13 % (2025), nie vermittelt 65 %.](assets/tracks/da_by_year.png)
+![Data-Analytics-Ergebnisse nach Jahr: als Analyst eingestellt fällt von 40 % (2022) auf 13 % (2025), nie vermittelt 65 %.](assets/de/tracks/da_by_year.png)
 
 **1.954 Absolventen.** Ironhacks *stärkster* Track — und bricht trotzdem ein: 2022 **40 %** → 2023 28 % → 2024 20 % → **2025 13 %** (65 % nie vermittelt).
 
 ## Cybersecurity
 
-![Cybersecurity-Ergebnisse nach Jahr: im Fachgebiet eingestellt fällt von 35 % (2022) auf 10 % (2025), nie vermittelt 72 %.](assets/tracks/cy_by_year.png)
+![Cybersecurity-Ergebnisse nach Jahr: im Fachgebiet eingestellt fällt von 35 % (2022) auf 10 % (2025), nie vermittelt 72 %.](assets/de/tracks/cy_by_year.png)
 
 **505 Absolventen.** 2022 35 % → 2023 16 % → 2024 14 % → **2025 10 %** im Fachgebiet, mit **57–72 %** der jüngsten Kohorten nie vermittelt.
 
 ## AI Engineering
 
-![AI-Engineering-Ergebnisse nach Jahr: Jahrgang 2025 mit 14 % im Fachgebiet, 60 % nie vermittelt.](assets/tracks/ai_by_year.png)
+![AI-Engineering-Ergebnisse nach Jahr: Jahrgang 2025 mit 14 % im Fachgebiet, 60 % nie vermittelt.](assets/de/tracks/ai_by_year.png)
 
 **139 Absolventen** (neuester, teuerster Track). **Jahrgang 2025: 14 % im Fachgebiet eingestellt, 60 % nie vermittelt** (n=76). Gestartet genau, als der Markt kippte.
 
 ## Data Science & ML
 
-![Data-Science-&-ML-Ergebnisse nach Jahr: Jahrgang 2025 mit 13 % im Fachgebiet, 52 % nie vermittelt.](assets/tracks/ml_by_year.png)
+![Data-Science-&-ML-Ergebnisse nach Jahr: Jahrgang 2025 mit 13 % im Fachgebiet, 52 % nie vermittelt.](assets/de/tracks/ml_by_year.png)
 
 **151 Absolventen.** **Jahrgang 2025: 13 % im Fachgebiet, 52 % nie vermittelt** (n=75) — die niedrigste Fachquote aller Tracks.
 
