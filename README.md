@@ -163,6 +163,10 @@ Ironhack still books that person as a UX/UI "designer hired in field." If the fl
 
 ---
 
+## Provenance & tamper‑evidence
+
+Can we prove we actually fetched this from Ironhack, that the numbers weren't altered, and that the proof survives if Ironhack later deletes the directory? Largely yes. The capture is hashed into a Merkle root and that root is **signed by an independent RFC 3161 timestamp authority**, which freezes it in time — after that, no deletion or edit on Ironhack's side can change what we can prove the endpoint returned on the capture date. Cloudflare `cf-ray` headers and the live TLS certificate are captured as corroboration. Full threat model, honest limitations (transferable origin needs TLSNotary/zkTLS), and step‑by‑step verification are in **[PROVENANCE.md](PROVENANCE.md)**.
+
 ## The "high‑paid" part
 
 This dataset records employment **status**, not pay, so it cannot directly verify "high‑paid." But it doesn't need to: if only ~18% are employed **as designers at all**, the "high‑paid designer" promise is moot for the other ~82%. Ironhack's own salary blog, meanwhile, cites European UX/UI averages in the €25–42k range — modest, and irrelevant to the majority who never enter the field.
@@ -237,7 +241,10 @@ python3 make_charts.py     # -> assets/*.png
 | `scrape.py` | Collects the alumni‑portal directory into local JSONL + CSV (token via `IRONHACK_CSRF` env) |
 | `analyze.py` | Single‑campus aggregate stats |
 | `analyze_all.py` | Combined analysis across all campuses → `data/report_all.json` |
-| `make_charts.py` | Renders the four infographics in `assets/` |
+| `make_charts.py` | Renders the five infographics in `assets/` |
+| `capture.py` | Tamper‑evident capture: saves raw response bytes + Cloudflare headers |
+| `provenance.py` | Builds `provenance/manifest.json` (SHA‑256 + Merkle root + TLS/CF witness) |
+| `PROVENANCE.md` | How we attest the fetch & non‑alteration, and its limits |
 | `data/report_all.json` | The aggregate, **anonymous** result set (counts only) |
 | `assets/*.png` | The charts |
 

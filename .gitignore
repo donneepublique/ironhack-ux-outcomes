@@ -8,6 +8,10 @@ data/report.json
 # Only the aggregate, anonymous report JSON is safe to publish.
 !data/report_all.json
 
+# Raw capture bodies contain personal data — publish only their HASHES
+# (in provenance/manifest.json) and the no-PII header/witness files.
+capture/**/*.body.json
+
 # junk
 __pycache__/
 .DS_Store

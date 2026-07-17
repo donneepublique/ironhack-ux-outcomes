@@ -1,0 +1,14 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "https://my.ironhack.com/api/alumni?page=6&limit=100",
+    "body": "{\"tracks\": [\"ux\"], \"campus\": \"rmt\", \"isSearching\": false}"
+  },
+  "status": 200,
+  "date": "Fri, 17 Jul 2026 16:58:25 GMT",
+  "cf-ray": "a1caca6438ccecfd-LHR",
+  "server": "cloudflare",
+  "etag": "W/\"d3d0-rKHD4WysEVEzEdJYphTMyA4N3AY\"",
+  "content-length": null,
+  "content-type": "application/json; charset=utf-8"
+}
