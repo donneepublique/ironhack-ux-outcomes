@@ -24,3 +24,6 @@ __pycache__/
 
 # Operational notification letters — kept local (do not tip off the target publicly)
 notifications/
+
+# Articles + Reddit kits/comments — stratégie de diffusion, gardée en local
+article/
