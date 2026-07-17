@@ -45,7 +45,9 @@ BUCKETS = {
     "placement_not_successful": "Never placed / searching / inactive",
     "searching": "Never placed / searching / inactive",
     "inactive": "Never placed / searching / inactive",
+    "pending": "Never placed / searching / inactive",
     "deferred_more_than_45d": "Never placed / searching / inactive",
+    "deferred_more_than_45d_sc": "Never placed / searching / inactive",
     "deferred_less_than_45d": "Never placed / searching / inactive",
     "intervention_careers": "Never placed / searching / inactive",
     "intervention_careers_not_success": "Never placed / searching / inactive",
@@ -116,6 +118,26 @@ def main():
         for c, rs in sorted(by_campus.items(), key=lambda kv: -len(kv[1]))
     }
 
+    # by graduation year (does the outcome change over time / with recency?)
+    by_year = defaultdict(list)
+    for r in rows:
+        y = (r["end_date"] or "")[:4] or "?"
+        by_year[y].append(r)
+    per_year = {}
+    for y, rs in sorted(by_year.items()):
+        nn = len(rs)
+        cb = Counter(BUCKETS.get(r["career_status"], "Other/unknown") for r in rs)
+        per_year[y] = {
+            "n": nn,
+            "in_field_pct": pct(cb.get("Salaried designer job (in field)", 0), nn),
+            "not_designer_pct": pct(cb.get("Job, but NOT as a designer", 0), nn),
+            "freelance_pct": pct(cb.get("Freelance / self-employed", 0), nn),
+            "never_placed_pct": pct(cb.get("Never placed / searching / inactive", 0), nn),
+            "left_field_pct": pct(cb.get("Left the field (school / other)", 0), nn),
+            "incomplete_pct": pct(cb.get("Did not complete / not eligible", 0), nn),
+            "internship_pct": pct(cb.get("Internship only", 0), nn),
+        }
+
     # freelance tenure across all campuses
     fl = sorted(m for r in rows if r["career_status"] == "freelance" and (m := months_since(r["end_date"])) is not None)
     freelance = {
@@ -137,6 +159,7 @@ def main():
         "overall": overall,
         "overall_mature_cohorts": {"cutoff_months": MATURE_MONTHS, **overall_mature},
         "per_campus": per_campus,
+        "per_year": per_year,
         "freelance_signal": freelance,
     }
     with open(os.path.join(DATA, "report_all.json"), "w") as f:
@@ -158,6 +181,11 @@ def main():
     print(f"\nPer-campus in-field rate:")
     for c, d in per_campus.items():
         print(f"  {c:5s} n={d['n']:4d}  in_field={d['in_field_pct']:5.1f}%  never_placed={d['never_placed_pct']:5.1f}%")
+    print(f"\nBy graduation year:")
+    print(f"  {'year':5s} {'n':>5s} {'in-field':>9s} {'not-desgn':>10s} {'freelance':>10s} {'never-plc':>10s} {'left':>6s}")
+    for y, d in per_year.items():
+        print(f"  {y:5s} {d['n']:5d} {d['in_field_pct']:8.1f}% {d['not_designer_pct']:9.1f}% "
+              f"{d['freelance_pct']:9.1f}% {d['never_placed_pct']:9.1f}% {d['left_field_pct']:5.1f}%")
     print(f"\nWrote data/report_all.json")
 
 

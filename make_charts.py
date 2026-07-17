@@ -66,6 +66,40 @@ def hbar(fname, title, subtitle, labels, values, colors, value_fmt, note=None):
     print("wrote", out)
 
 
+def grouped_years(fname, title, subtitle, years, ns, s1, s2, s1label, s2label, note):
+    fig, ax = plt.subplots(figsize=(10, 5.4), dpi=200)
+    x = range(len(years))
+    w = 0.4
+    b1 = ax.bar([i - w / 2 for i in x], s1, w, color=BLUE, zorder=3, label=s1label)
+    b2 = ax.bar([i + w / 2 for i in x], s2, w, color=RED, zorder=3, label=s2label)
+    ax.set_xticks(list(x))
+    ax.set_xticklabels([f"{y}\n(n={n})" for y, n in zip(years, ns)], fontsize=10)
+    ax.set_ylim(0, max(s1 + s2) * 1.18)
+    for spine in ["top", "right"]:
+        ax.spines[spine].set_visible(False)
+    ax.spines["left"].set_color(GRID)
+    ax.spines["bottom"].set_color(GRID)
+    ax.tick_params(length=0)
+    ax.yaxis.grid(True, color=GRID, linewidth=0.8, zorder=0)
+    ax.set_axisbelow(True)
+    ax.set_ylabel("% of that year's graduates", fontsize=9.5, color=INK2)
+    for bars in (b1, b2):
+        for r in bars:
+            h = r.get_height()
+            ax.text(r.get_x() + r.get_width() / 2, h + max(s1 + s2) * 0.012,
+                    f"{h:.0f}", ha="center", va="bottom", fontsize=8.5,
+                    color=INK, fontweight="bold")
+    ax.legend(loc="upper left", frameon=False, fontsize=10.5)
+    fig.suptitle(title, x=0.012, y=0.99, ha="left", fontsize=15.5, fontweight="bold", color=INK)
+    ax.set_title(subtitle, loc="left", fontsize=10.5, color=INK2, pad=10)
+    fig.text(0.012, 0.005, note, ha="left", fontsize=8, color=MUTED)
+    fig.tight_layout(rect=(0, 0.03, 1, 0.95))
+    out = os.path.join(ASSETS, fname)
+    fig.savefig(out, bbox_inches="tight")
+    plt.close(fig)
+    print("wrote", out)
+
+
 rep = json.load(open(os.path.join(HERE, "data", "report_all.json")))
 N = rep["overall"]["n"]
 
@@ -124,5 +158,20 @@ hbar("03_by_campus.png",
      "Even the best campus tops out near 28%. The heavily-marketed Remote track (largest cohort) is worst.",
      labels, vals, cols, lambda v: f"{v:.1f}%",
      note="Amsterdam n=8 — too small to read into.")
+
+# ---- Chart 4: outcomes by graduation year ----
+py = rep["per_year"]
+years = [y for y in ["2020", "2021", "2022", "2023", "2024", "2025", "2026"] if y in py]
+ns = [py[y]["n"] for y in years]
+infield = [py[y]["in_field_pct"] for y in years]
+never = [py[y]["never_placed_pct"] for y in years]
+grouped_years(
+    "04_by_year.png",
+    "Outcomes are getting worse, cohort by cohort",
+    "Share hired as a designer vs. never placed / searching, by graduation year.",
+    years, ns, infield, never,
+    "Hired as a designer (in-field)", "Never placed / searching / inactive",
+    "2025–2026 cohorts are recency-inflated (little time to land a role). "
+    "Placeholder-dated (1987) and n<20 years excluded.")
 
 print("done")
