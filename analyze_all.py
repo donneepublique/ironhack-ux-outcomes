@@ -118,6 +118,23 @@ def main():
         for c, rs in sorted(by_campus.items(), key=lambda kv: -len(kv[1]))
     }
 
+    # campus x year cross-tab (in-field rate + n per cell)
+    cy = defaultdict(lambda: defaultdict(list))
+    for r in rows:
+        y = (r["end_date"] or "")[:4] or "?"
+        cy[r["campus"] or "?"][y].append(r)
+    per_campus_year = {}
+    for c, ys in cy.items():
+        per_campus_year[c] = {}
+        for y, rs in ys.items():
+            nn = len(rs)
+            cb = Counter(BUCKETS.get(r["career_status"], "Other/unknown") for r in rs)
+            per_campus_year[c][y] = {
+                "n": nn,
+                "in_field_pct": pct(cb.get("Salaried designer job (in field)", 0), nn),
+                "never_placed_pct": pct(cb.get("Never placed / searching / inactive", 0), nn),
+            }
+
     # by graduation year (does the outcome change over time / with recency?)
     by_year = defaultdict(list)
     for r in rows:
@@ -148,7 +165,7 @@ def main():
     }
 
     report = {
-        "source": "my.ironhack.com/api/alumni (public alumni directory), scraped 2026-07",
+        "source": "my.ironhack.com/api/alumni (Ironhack alumni-portal directory, login-gated), scraped 2026-07",
         "scope": "track=ux, all 10 campuses",
         "as_of": AS_OF.isoformat(),
         "ironhack_public_claims": {
@@ -160,6 +177,7 @@ def main():
         "overall_mature_cohorts": {"cutoff_months": MATURE_MONTHS, **overall_mature},
         "per_campus": per_campus,
         "per_year": per_year,
+        "per_campus_year": per_campus_year,
         "freelance_signal": freelance,
     }
     with open(os.path.join(DATA, "report_all.json"), "w") as f:

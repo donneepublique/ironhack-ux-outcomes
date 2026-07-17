@@ -2,9 +2,9 @@
 
 **A data look at the outcomes Ironhack itself publishes.**
 
-Ironhack sells its UX/UI bootcamp on placement: *"~90% of job‑seeking graduates placed within 6 months"* (PwC‑audited), *"96% graduation rate"*, salary messaging built around a UX/UI career. This repository checks that promise against **Ironhack's own public alumni directory** — every UX/UI graduate it exposes, across all 10 campuses — and finds a very different picture.
+Ironhack sells its UX/UI bootcamp on placement: *"~90% of job‑seeking graduates placed within 6 months"* (PwC‑audited), *"96% graduation rate"*, salary messaging built around a UX/UI career. This repository checks that promise against **Ironhack's own alumni‑portal directory** — the internal networking/hiring directory that logged‑in alumni see on `my.ironhack.com`, covering every UX/UI graduate across all 10 campuses — and finds a very different picture.
 
-> **This is a data‑journalism exercise built entirely on Ironhack's own public numbers.** It is **aggregate and anonymous** — no individual graduate is named. It does **not** allege fraud. It shows the distance between a *marketing impression* ("become a designer") and the *typical documented outcome*, using Ironhack's own status labels taken at face value.
+> **This is a data‑journalism exercise built on Ironhack's own system of record.** The source is not a curated public page but Ironhack's **internal alumni directory**, where each graduate's career‑services outcome is logged (accessed with an alumni login). Precisely because it is the internal record and not a marketing showcase, it includes the **full spread of outcomes, failures included** — it is not cherry‑picked. All results here are **aggregate and anonymous** — no individual graduate is named, and no raw personal data is republished. It does **not** allege fraud: it shows the distance between a *marketing impression* ("become a designer") and the *typical documented outcome*, using Ironhack's own status labels taken at face value.
 
 ---
 
@@ -34,7 +34,7 @@ Two words carry the claim: **"job‑seeking"** (the denominator) and **"placed"*
 
 ## Method
 
-- **Source:** `POST my.ironhack.com/api/alumni` — the public alumni directory Ironhack uses as a marketing showcase. Each record carries Ironhack's own `career_services.status` label.
+- **Source:** `POST my.ironhack.com/api/alumni` — Ironhack's alumni‑portal directory, the internal record logged‑in alumni browse (accessed here with an alumni login). Each record carries Ironhack's own `career_services.status` label. This is Ironhack's system of record, not a public marketing page, so it reports the real outcome distribution including failures.
 - **Scope:** every UX/UI (`track=ux`) graduate the directory exposes, across **all 10 campuses** — **n = 2,126**.
 - **Ground truth:** we take Ironhack's own status labels at face value and group them into plain‑language buckets. We invent nothing. The full raw‑label → bucket mapping is in the [appendix](#appendix-a--full-status-enumeration-all-24-labels).
 - **Recency control:** graduates from the last ~12 months are naturally still "searching," so we report **mature cohorts** (≥ 12 months out, n = 1,999) and a full **year‑by‑year** breakdown separately.
@@ -123,11 +123,36 @@ The in‑field hire rate varies sharply by campus — and the **Remote** program
 
 Even the **best** campus (Barcelona) tops out at ~28% hired in‑field. *(Amsterdam n=8 is too small to read into.)*
 
-## 5. The "freelance" question
+## 5. The full detail: campus × graduation year
+
+Crossing both dimensions shows exactly **where and when** the bootcamp ever worked. Cells with a reliable sample (n ≥ 20) are coloured by in‑field rate; small‑sample cells (n < 20, shown grey in the chart / *italic* in the table) are too noisy to read.
+
+![Heatmap of hired-as-a-designer rate by campus and graduation year: peaks around 2022 (Madrid 51%, Barcelona 49%) that barely clear 50%, eroding to the low teens by 2024 across every campus.](assets/05_campus_year.png)
+
+**In‑field hire rate — % (n) per cell** *(italic = n < 20, small sample; — = no graduates that year)*:
+
+| Campus (total n) | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | 2026 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| **Remote** (886) | — | *38% (8)* | 24% (123) | 16% (322) | 14% (211) | 8% (148) | 0% (74) |
+| **Madrid** (299) | *31% (13)* | *36% (14)* | 51% (57) | 41% (69) | *38% (8)* | *0% (3)* | — |
+| **Berlin** (286) | *9% (11)* | *54% (11)* | 19% (53) | 14% (133) | 11% (66) | *11% (9)* | — |
+| **Paris** (223) | *0% (7)* | 38% (29) | 36% (64) | 8% (84) | 5% (38) | — | — |
+| **Barcelona** (194) | *15% (13)* | *50% (8)* | 49% (45) | 27% (78) | 10% (49) | — | — |
+| **Lisbon** (104) | *100% (2)* | *33% (6)* | 46% (22) | 16% (55) | *10% (19)* | — | — |
+| **São Paulo** (43) | *27% (11)* | *40% (10)* | 18% (22) | — | — | — | — |
+| **Mexico City** (42) | *40% (5)* | *12% (8)* | 21% (24) | — | — | — | — |
+| **Miami** (41) | *0% (5)* | *0% (3)* | *30% (10)* | 5% (20) | *33% (3)* | — | — |
+| **Amsterdam** (8) | *0% (4)* | *33% (3)* | — | — | — | — | — |
+
+Even the strongest, best‑sampled cells — **Madrid 2022 (51%, n=57)**, **Barcelona 2022 (49%, n=45)**, **Madrid 2023 (41%, n=69)** — barely reach a coin‑flip, and only at the 2022 peak. By 2023–2024 every well‑sampled campus has collapsed into the teens (Remote 16→14%, Berlin 14→11%, Paris 8→5%, Barcelona 27→10%). The bootcamp's best years are behind it, on every campus at once.
+
+*(The matching never‑placed cross‑tab is in `data/report_all.json` under `per_campus_year`.)*
+
+## 6. The "freelance" question
 
 A common suspicion is that "freelance UX designer" is often a polite label for *couldn't find a salaried role.* In this data, freelance is a **small** group — **89 people, 4.2%** (131, 6.2%, if you fold in `entrepreneur`) — so it is **not** the main story. But it is strikingly **long‑tenured**: the median freelancer graduated **40 months** ago, and **88 of 89** have been freelance for **24+ months.** That is consistent with (though not proof of) freelancing being a durable destination rather than a short bridge to employment.
 
-## 6. Even the "success" bucket is inflated
+## 7. Even the "success" bucket is inflated
 
 The 18% "hired in‑field" figure is itself an *over*count. In at least one case the authors can personally verify, a graduate labelled `hired_in_field` was, in reality:
 
@@ -147,7 +172,8 @@ This dataset records employment **status**, not pay, so it cannot directly verif
 - **Placeholder dates.** 133 Madrid records share the exact date `1987‑12‑04T00:00:00Z` — a missing‑date sentinel, not a real 1987 cohort. They skew toward `back_to_university` / `back_to_job`. They are **kept** in the population totals (their status labels are valid) but **excluded** from the year‑by‑year chart.
 - **Labels are Ironhack's.** We don't know Ironhack's precise internal definition of `placement_not_successful`, or how aggressively `searching`/`inactive` are refreshed.
 - **Snapshot in time** (scraped July 2026).
-- **Directory ≠ census.** It may not contain 100% of graduates — but it *does* include failures, drop‑outs, and `withdrew`, so it is not a cherry‑picked success reel; if anything it undercounts the worst outcomes (people who vanish entirely).
+- **Directory ≠ census.** It may not contain 100% of graduates — but as Ironhack's internal record it *does* include failures, drop‑outs, and `withdrew`, so it is not a cherry‑picked success reel; if anything it undercounts the worst outcomes (people who vanish entirely).
+- **Access.** The directory sits behind the `my.ironhack.com` alumni login; it is not a public web page. The figures here are Ironhack's own; only aggregate, anonymous counts are republished (see *Ethics & privacy*).
 
 ## Limitations
 
@@ -190,7 +216,8 @@ Every distinct `career_services.status` value in the data, with the bucket it ma
 ## Reproduce
 
 ```bash
-# 1. Get a fresh x-csrf-token from the Network tab of the alumni page while logged in.
+# 1. Log in to the Ironhack alumni portal (requires an alumni account), then copy a
+#    fresh x-csrf-token from the Network tab. It is short-lived.
 export IRONHACK_CSRF="<token>"
 
 # 2. Scrape every campus (ux track).
@@ -207,7 +234,7 @@ python3 make_charts.py     # -> assets/*.png
 
 | File | What it is |
 |---|---|
-| `scrape.py` | Collects the public alumni directory into local JSONL + CSV (token via `IRONHACK_CSRF` env) |
+| `scrape.py` | Collects the alumni‑portal directory into local JSONL + CSV (token via `IRONHACK_CSRF` env) |
 | `analyze.py` | Single‑campus aggregate stats |
 | `analyze_all.py` | Combined analysis across all campuses → `data/report_all.json` |
 | `make_charts.py` | Renders the four infographics in `assets/` |
@@ -216,8 +243,8 @@ python3 make_charts.py     # -> assets/*.png
 
 ## Ethics & privacy
 
-- The source is data Ironhack **publishes itself** as a marketing showcase.
-- All published outputs are **aggregate and anonymous**. Raw per‑person data (names, LinkedIn URLs, photos) is **git‑ignored** and never leaves the analyst's machine.
+- The source is **Ironhack's own alumni‑portal directory**, accessed with an alumni login — Ironhack's internal system of record, not a public page.
+- **Nothing identifying is republished.** All published outputs are **aggregate and anonymous** counts. Raw per‑person data (names, LinkedIn URLs, photos) is **git‑ignored** and never leaves the analyst's machine. The purpose is the public interest of prospective students weighing the bootcamp's marketing claims against its own recorded outcomes.
 - Status labels are **Ironhack's own**, taken at face value. This is a comparison between a marketing impression and the typical documented outcome — not an allegation of fraud. See *Limitations* and *Data quality notes* above.
 
 ## License

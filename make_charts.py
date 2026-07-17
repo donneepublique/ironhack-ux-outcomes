@@ -159,6 +159,77 @@ hbar("03_by_campus.png",
      labels, vals, cols, lambda v: f"{v:.1f}%",
      note="Amsterdam n=8 — too small to read into.")
 
+# ---- Chart 5: campus x year heatmap of in-field rate ----
+from matplotlib.patches import Rectangle
+
+# validated sequential blue ramp (light -> dark); index by in-field % band
+BLUE_RAMP = ["#cde2fb", "#9ec5f4", "#6da7ec", "#3987e5", "#256abf", "#184f95"]
+LOWN_FILL = "#edeeea"  # n below threshold: signal "too small", don't color by rate
+MIN_N = 20
+
+
+def blue_for(pct_val):
+    idx = min(len(BLUE_RAMP) - 1, int(pct_val // 8))  # 0-8->0, 8-16->1, ... 40+->5
+    return BLUE_RAMP[idx], ("#ffffff" if idx >= 3 else INK)
+
+
+def heatmap(fname, title, subtitle, rows_labels, cols, matrix, note):
+    nr, nc = len(rows_labels), len(cols)
+    fig, ax = plt.subplots(figsize=(1.15 * nc + 2.6, 0.62 * nr + 2.0), dpi=200)
+    for i in range(nr):
+        for j in range(nc):
+            cell = matrix[i][j]
+            x, y = j, nr - 1 - i
+            if cell is None:
+                ax.add_patch(Rectangle((x, y), 1, 1, facecolor=SURFACE,
+                                       edgecolor="#ffffff", linewidth=2))
+                continue
+            v, n = cell["in_field_pct"], cell["n"]
+            if n < MIN_N:
+                fc, tc = LOWN_FILL, MUTED
+            else:
+                fc, tc = blue_for(v)
+            ax.add_patch(Rectangle((x, y), 1, 1, facecolor=fc,
+                                   edgecolor="#ffffff", linewidth=2))
+            ax.text(x + 0.5, y + 0.60, f"{v:.0f}%", ha="center", va="center",
+                    fontsize=11, fontweight="bold", color=tc)
+            ax.text(x + 0.5, y + 0.28, f"n={n}", ha="center", va="center",
+                    fontsize=8, color=tc)
+    ax.set_xlim(0, nc)
+    ax.set_ylim(0, nr)
+    ax.set_xticks([j + 0.5 for j in range(nc)])
+    ax.set_xticklabels(cols, fontsize=10)
+    ax.set_yticks([nr - 1 - i + 0.5 for i in range(nr)])
+    ax.set_yticklabels(rows_labels, fontsize=10.5)
+    ax.xaxis.tick_top()
+    for s in ax.spines.values():
+        s.set_visible(False)
+    ax.tick_params(length=0)
+    fig.suptitle(title, x=0.012, y=0.995, ha="left", fontsize=15, fontweight="bold", color=INK)
+    ax.set_title(subtitle, loc="left", fontsize=10, color=INK2, pad=22)
+    fig.text(0.012, 0.008, note, ha="left", fontsize=8, color=MUTED)
+    fig.tight_layout(rect=(0, 0.03, 1, 0.95))
+    out = os.path.join(ASSETS, fname)
+    fig.savefig(out, bbox_inches="tight")
+    plt.close(fig)
+    print("wrote", out)
+
+
+cyr = rep["per_campus_year"]
+cy_name = {"rmt": "Remote", "mad": "Madrid", "ber": "Berlin", "par": "Paris",
+           "bcn": "Barcelona", "lis": "Lisbon", "sao": "São Paulo",
+           "mex": "Mexico City", "mia": "Miami", "ams": "Amsterdam"}
+cy_years = ["2020", "2021", "2022", "2023", "2024", "2025", "2026"]
+cy_order = sorted(cyr, key=lambda c: -rep["per_campus"][c]["n"])
+cy_rows = [f"{cy_name.get(c, c)} ({rep['per_campus'][c]['n']})" for c in cy_order]
+cy_matrix = [[cyr[c].get(y) for y in cy_years] for c in cy_order]
+heatmap(
+    "05_campus_year.png",
+    "Hired-as-a-designer rate, campus × graduation year",
+    "Darker = higher in-field rate. Grey cells have n<20 (too small to read). Blank = no graduates.",
+    cy_rows, cy_years, cy_matrix,
+    "Row label shows each campus's total n. Even the strongest cells rarely clear 50%, and they erode after 2022.")
+
 # ---- Chart 4: outcomes by graduation year ----
 py = rep["per_year"]
 years = [y for y in ["2020", "2021", "2022", "2023", "2024", "2025", "2026"] if y in py]

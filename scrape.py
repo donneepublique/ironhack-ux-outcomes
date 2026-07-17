@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 """
-Scrape Ironhack's public alumni directory (my.ironhack.com/api/alumni).
+Scrape Ironhack's alumni-portal directory (my.ironhack.com/api/alumni).
 
-This is the same data Ironhack surfaces on its own alumni marketing pages.
-We store it verbatim (JSONL, full fidelity) and a flattened CSV for analysis.
+This is Ironhack's INTERNAL alumni directory, behind the my.ironhack.com login
+(you need an alumni account to reach it) — its system of record for each
+graduate's career-services outcome, not a public marketing page. We store it
+verbatim (JSONL, full fidelity) and a flattened CSV for analysis.
 
 Usage:
     IRONHACK_CSRF="<token>" python3 scrape.py --track ux --campus rmt
 
-The CSRF token is short-lived; grab a fresh one from the Network tab of the
-alumni page if requests start returning 401/403.
+The CSRF token is short-lived; log in to the alumni portal and grab a fresh one
+from the Network tab if requests start returning 401/403.
 """
 import argparse
 import csv

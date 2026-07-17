@@ -101,7 +101,7 @@ def main():
     hired_companies = Counter(r["outcome_company"].strip() or "(unspecified)" for r in hired_rows)
 
     report = {
-        "source": "my.ironhack.com/api/alumni (public alumni directory)",
+        "source": "my.ironhack.com/api/alumni (Ironhack alumni-portal directory, login-gated)",
         "track": "ux",
         "campus": "rmt (remote)",
         "as_of": AS_OF.isoformat(),
