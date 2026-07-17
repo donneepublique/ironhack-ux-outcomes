@@ -1,0 +1,13 @@
+# Raw scraped data contains personal data (names, LinkedIn, photos) — never publish.
+data/*.jsonl
+data/*.csv
+
+# Single-campus JSON lists employer names — keep only the fully-aggregate one.
+data/report.json
+
+# Only the aggregate, anonymous report JSON is safe to publish.
+!data/report_all.json
+
+# junk
+__pycache__/
+.DS_Store

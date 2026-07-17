@@ -1,0 +1,157 @@
+{
+  "source": "my.ironhack.com/api/alumni (public alumni directory), scraped 2026-07",
+  "scope": "track=ux, all 10 campuses",
+  "as_of": "2026-07-17",
+  "ironhack_public_claims": {
+    "placed_6mo_job_seeking": "90% of job-seeking grads placed within 6 months (PwC-audited)",
+    "employed_180d_uxui": "83% of job-seeking UX/UI grads employed within 180 days",
+    "avg_starting_salary_usd": 65000
+  },
+  "overall": {
+    "n": 2126,
+    "in_field_n": 386,
+    "in_field_pct_of_all": 18.2,
+    "job_seekers": 1660,
+    "placed_broad_n": 841,
+    "ironhack_style_placed_pct": 50.7,
+    "status": {
+      "placement_not_successful": 584,
+      "hired_in_field": 386,
+      "searching": 163,
+      "back_to_job": 138,
+      "inactive": 129,
+      "back_to_university": 120,
+      "freelance": 89,
+      "personal_development": 83,
+      "hired_out_of_field": 76,
+      "not_graduated_cs": 71,
+      "internship": 68,
+      "intervention_careers": 45,
+      "entrepreneur": 42,
+      "intervention_education": 25,
+      "ironhack_employee": 24,
+      "not_eligible": 23,
+      "short_term": 18,
+      "deferred_more_than_45d": 14,
+      "withdrew": 14,
+      "intervention_careers_not_success": 5,
+      "pending": 4,
+      "deferred_less_than_45d": 3,
+      "deferred_more_than_45d_sc": 1,
+      "intervention_education_not_success": 1
+    },
+    "buckets": {
+      "Never placed / searching / inactive": 969,
+      "Salaried designer job (in field)": 386,
+      "Job, but NOT as a designer": 238,
+      "Left the field (school / other)": 217,
+      "Freelance / self-employed": 131,
+      "Did not complete / not eligible": 94,
+      "Internship only": 86,
+      "Other/unknown": 5
+    }
+  },
+  "overall_mature_cohorts": {
+    "cutoff_months": 12,
+    "n": 1999,
+    "in_field_n": 383,
+    "in_field_pct_of_all": 19.2,
+    "job_seekers": 1537,
+    "placed_broad_n": 825,
+    "ironhack_style_placed_pct": 53.7,
+    "status": {
+      "placement_not_successful": 584,
+      "hired_in_field": 383,
+      "back_to_job": 133,
+      "inactive": 129,
+      "back_to_university": 119,
+      "freelance": 89,
+      "personal_development": 83,
+      "hired_out_of_field": 74,
+      "not_graduated_cs": 71,
+      "internship": 65,
+      "searching": 61,
+      "intervention_careers": 43,
+      "entrepreneur": 39,
+      "ironhack_employee": 24,
+      "not_eligible": 23,
+      "intervention_education": 22,
+      "short_term": 18,
+      "withdrew": 14,
+      "deferred_more_than_45d": 11,
+      "intervention_careers_not_success": 5,
+      "pending": 4,
+      "deferred_less_than_45d": 3,
+      "deferred_more_than_45d_sc": 1,
+      "intervention_education_not_success": 1
+    },
+    "buckets": {
+      "Never placed / searching / inactive": 859,
+      "Salaried designer job (in field)": 383,
+      "Job, but NOT as a designer": 231,
+      "Left the field (school / other)": 216,
+      "Freelance / self-employed": 128,
+      "Did not complete / not eligible": 94,
+      "Internship only": 83,
+      "Other/unknown": 5
+    }
+  },
+  "per_campus": {
+    "rmt": {
+      "n": 886,
+      "in_field_pct": 14.3,
+      "never_placed_pct": 59.1
+    },
+    "mad": {
+      "n": 299,
+      "in_field_pct": 23.1,
+      "never_placed_pct": 20.1
+    },
+    "ber": {
+      "n": 286,
+      "in_field_pct": 15.0,
+      "never_placed_pct": 55.6
+    },
+    "par": {
+      "n": 223,
+      "in_field_pct": 19.3,
+      "never_placed_pct": 42.2
+    },
+    "bcn": {
+      "n": 194,
+      "in_field_pct": 27.8,
+      "never_placed_pct": 35.1
+    },
+    "lis": {
+      "n": 104,
+      "in_field_pct": 24.0,
+      "never_placed_pct": 22.1
+    },
+    "sao": {
+      "n": 43,
+      "in_field_pct": 25.6,
+      "never_placed_pct": 34.9
+    },
+    "mex": {
+      "n": 42,
+      "in_field_pct": 19.0,
+      "never_placed_pct": 26.2
+    },
+    "mia": {
+      "n": 41,
+      "in_field_pct": 12.2,
+      "never_placed_pct": 36.6
+    },
+    "ams": {
+      "n": 8,
+      "in_field_pct": 12.5,
+      "never_placed_pct": 0.0
+    }
+  },
+  "freelance_signal": {
+    "n": 89,
+    "pct_of_all": 4.2,
+    "median_months_since_grad": 40,
+    "over_24m_n": 88
+  }
+}
