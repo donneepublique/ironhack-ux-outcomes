@@ -42,6 +42,10 @@ Ironhack bewirbt sein UX/UI-Bootcamp über Vermittlung: *„~90 % der arbeitsuch
 
 Zwei Wörter tragen die Behauptung: **„arbeitsuchend"** (der Nenner) und **„vermittelt"** (nie als *im Fachgebiet* definiert). Das Alumni-Verzeichnis zeigt, was diese Wörter verbergen.
 
+**Die Aussagen, dokumentiert.** Ironhacks „von PwC geprüfter" Outcomes-Bericht erklärte *„we placed 90% of job-seeking graduates within 6 months"* (sowie 76 % / 89 % nach 90 / 180 Tagen); die aktuelle UX/UI-Seite wirbt mit *„pay once you get a job"* und *„land your first role in tech"*, während die Career-Services-Seite Google, Amazon, Meta und Uber als Arbeitgeber nennt, bei denen *„Ironhackers now work"*. Archivierter Bericht: [Wayback, 2022](http://web.archive.org/web/20220126230803/https://www.ironhack.com/en/news/ironhack-student-outcomes-report-audited-by-pwc).
+
+![Ironhacks UX/UI-Kursseite (erfasst 2026): Preis 8.000 €, „pay once you get a job", „land your first role in tech".](assets/claims/02_ux_ui_course_2026.png)
+
 ## Methode
 
 - **Quelle:** `POST my.ironhack.com/api/alumni` — Ironhacks internes Alumni-Verzeichnis, der Datensatz, den eingeloggte Alumni einsehen (Zugang hier über ein Alumni-Konto). Jeder Datensatz trägt Ironhacks eigenes Label `career_services.status`. Es ist Ironhacks Datenbestand, keine öffentliche Seite, und spiegelt daher die echte Ergebnisverteilung inklusive Misserfolge.

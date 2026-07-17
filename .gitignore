@@ -21,3 +21,6 @@ data_all/
 # junk
 __pycache__/
 .DS_Store
+
+# Operational notification letters — kept local (do not tip off the target publicly)
+notifications/

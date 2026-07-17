@@ -42,6 +42,10 @@ Ironhack sells its UX/UI bootcamp on placement: *"~90% of job‑seeking graduate
 
 Two words carry the claim: **"job‑seeking"** (the denominator) and **"placed"** (never defined as *in‑field*). The alumni directory lets us see what those words hide.
 
+**The claims, captured.** Ironhack's own PwC‑audited outcomes report stated *"we placed 90% of job‑seeking graduates within 6 months"* (and 76% / 89% at 90 / 180 days); its current UX/UI page markets *"pay once you get a job"* and *"you'll be ready to land your first role in tech,"* while Career Services lists Google, Amazon, Meta and Uber as where *"Ironhackers now work."* Archived report: [Wayback, 2022](http://web.archive.org/web/20220126230803/https://www.ironhack.com/en/news/ironhack-student-outcomes-report-audited-by-pwc).
+
+![Ironhack's UX/UI course page (captured 2026): price €8,000, "Study now, pay once you get a job", and "you'll be ready to land your first role in tech".](assets/claims/02_ux_ui_course_2026.png)
+
 ## Method
 
 - **Source:** `POST my.ironhack.com/api/alumni` — Ironhack's alumni‑portal directory, the internal record logged‑in alumni browse (accessed here with an alumni login). Each record carries Ironhack's own `career_services.status` label. This is Ironhack's system of record, not a public marketing page, so it reports the real outcome distribution including failures.
