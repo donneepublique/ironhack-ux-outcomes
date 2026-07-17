@@ -245,4 +245,21 @@ grouped_years(
     "2025–2026 cohorts are recency-inflated (little time to land a role). "
     "Placeholder-dated (1987) and n<20 years excluded.")
 
+# ---- Chart 6: the class of 2025 (most recent cohort) ----
+py25 = rep["per_year"]["2025"]
+b25 = [("Never placed / still searching / inactive", py25["never_placed_pct"], RED),
+       ("Hired as a designer (in-field)", py25["in_field_pct"], BLUE),
+       ("Employed, but NOT as a designer", py25["not_designer_pct"], BAR),
+       ("Freelance / self-employed", py25["freelance_pct"], BAR),
+       ("Left the field (school / other)", py25["left_field_pct"], BAR),
+       ("Internship only", py25["internship_pct"], BAR),
+       ("Did not complete / not eligible", py25["incomplete_pct"], BAR)]
+b25.sort(key=lambda x: -x[1])
+hbar("06_class_2025.png",
+     f"The class of 2025 — Ironhack's most recent UX/UI cohort (n={py25['n']})",
+     f"{py25['in_field_pct']}% hired as a designer. {py25['never_placed_pct']}% never placed or still "
+     f"searching. (2026 is too recent to read.)",
+     [l for l, _, _ in b25], [v for _, v, _ in b25], [c for _, _, c in b25],
+     lambda v: f"{v:.1f}%", None)
+
 print("done")

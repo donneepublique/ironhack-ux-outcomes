@@ -63,6 +63,8 @@ STR = {
   "c5_t": "Taux de recrutement comme designer, campus × année de diplôme",
   "c5_s": "Plus foncé = taux plus élevé. Cases grises : n<20 (trop peu). Vide = aucun diplômé.",
   "c5_n": "L'étiquette de ligne indique le n total du campus. Même les meilleures cases dépassent rarement 50 %, et s'érodent après 2022.",
+  "c6_t": "La promotion 2025 — la cohorte UX/UI la plus récente d'Ironhack (n={n})",
+  "c6_s": "{a} % recrutés comme designer. {b} % jamais placés ou encore en recherche. (2026 est trop récent pour être lu.)",
   "camp": {"rmt": "À distance", "mad": "Madrid", "ber": "Berlin", "par": "Paris", "bcn": "Barcelone",
            "lis": "Lisbonne", "sao": "São Paulo", "mex": "Mexico", "mia": "Miami", "ams": "Amsterdam"},
  },
@@ -89,6 +91,8 @@ STR = {
   "c5_t": "Einstellungsquote als Designer, Standort × Abschlussjahr",
   "c5_s": "Dunkler = höhere Quote. Graue Zellen: n<20 (zu klein). Leer = keine Absolventen.",
   "c5_n": "Zeilenbeschriftung = Gesamt-n des Standorts. Selbst die stärksten Zellen überschreiten selten 50 % und erodieren nach 2022.",
+  "c6_t": "Der Jahrgang 2025 — Ironhacks jüngste UX/UI-Kohorte (n={n})",
+  "c6_s": "{a} % als Designer eingestellt. {b} % nie vermittelt oder noch auf Suche. (2026 ist zu aktuell.)",
   "camp": {"rmt": "Remote", "mad": "Madrid", "ber": "Berlin", "par": "Paris", "bcn": "Barcelona",
            "lis": "Lissabon", "sao": "São Paulo", "mex": "Mexiko-Stadt", "mia": "Miami", "ams": "Amsterdam"},
  },
@@ -115,6 +119,8 @@ STR = {
   "c5_t": "Taxa de contratação como designer, campus × ano de conclusão",
   "c5_s": "Mais escuro = taxa mais alta. Células cinzentas: n<20 (demasiado pequeno). Vazio = sem diplomados.",
   "c5_n": "O rótulo da linha mostra o n total do campus. Mesmo as melhores células raramente passam de 50% e erodem após 2022.",
+  "c6_t": "A turma de 2025 — a coorte de UX/UI mais recente da Ironhack (n={n})",
+  "c6_s": "{a}% contratados como designer. {b}% nunca colocados ou à procura. (2026 é demasiado recente.)",
   "camp": {"rmt": "Remoto", "mad": "Madrid", "ber": "Berlim", "par": "Paris", "bcn": "Barcelona",
            "lis": "Lisboa", "sao": "São Paulo", "mex": "Cidade do México", "mia": "Miami", "ams": "Amesterdão"},
  },
@@ -241,7 +247,20 @@ def gen(lang):
     rows_l = [f"{t['camp'].get(c, c)} ({pc[c]['n']})" for c in order5]
     mat = [[cyr[c].get(y) for y in cy_years] for c in order5]
     heatmap(os.path.join(outdir, "05_campus_year.png"), t["c5_t"], t["c5_s"], rows_l, cy_years, mat, t["c5_n"])
-    print(f"{lang}: 5 charts -> assets/{lang}/")
+
+    # chart 6 — class of 2025
+    py25 = rep["per_year"]["2025"]
+    b25 = [(t["b_never"], py25["never_placed_pct"], RED), (t["b_infield"], py25["in_field_pct"], BLUE),
+           (t["b_notdes"], py25["not_designer_pct"], BAR), (t["b_free"], py25["freelance_pct"], BAR),
+           (t["b_left"], py25["left_field_pct"], BAR), (t["b_intern"], py25["internship_pct"], BAR),
+           (t["b_incomplete"], py25["incomplete_pct"], BAR)]
+    b25.sort(key=lambda x: -x[1])
+    a = f"{py25['in_field_pct']}".replace(".", ",")
+    bb = f"{py25['never_placed_pct']}".replace(".", ",")
+    hbar(os.path.join(outdir, "06_class_2025.png"), t["c6_t"].format(n=py25["n"]),
+         t["c6_s"].format(a=a, b=bb), [l for l, _, _ in b25], [v for _, v, _ in b25],
+         [c for _, _, c in b25], lambda yi, v: f"{v:.1f} %", None)
+    print(f"{lang}: 6 charts -> assets/{lang}/")
 
 
 if __name__ == "__main__":

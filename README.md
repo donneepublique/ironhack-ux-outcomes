@@ -10,6 +10,14 @@ Ironhack sells its UX/UI bootcamp on placement: *"~90% of job‑seeking graduate
 
 ---
 
+## ⚠️ Latest cohort with data — the class of 2025
+
+> **Of the 160 UX/UI graduates who finished in 2025, only 8.1% were hired as a designer; 74.4% were never placed or are still searching.** 2025 is the most recent year with meaningful data — 2026 graduates are excluded (too recent; Ironhack has not finished recording their outcomes).
+>
+> *For a fully-settled comparison, the 2023 class (18+ months out, n=761) still reached only 18% hired in‑field — so this is a lasting decline, not just fresh graduates.*
+
+![The class of 2025 (Ironhack's most recent UX/UI cohort, n=160): 74.4% never placed or still searching, only 8.1% hired as a designer.](assets/06_class_2025.png)
+
 ## TL;DR
 
 | Metric (all 10 campuses, n = 2,126 UX/UI grads) | Value |
@@ -92,7 +100,7 @@ Newest cohorts first:
 | Year | n | Hired in‑field | Not as designer | Freelance | Never placed | Left field | Incomplete | Internship |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | 2026 | 74 | 0.0% | 4.1% | 1.4% | 91.9% | 1.4% | 0.0% | 1.4% |
-| 2025 | 160 | 8.1% | 7.5% | 3.1% | 74.4% | 3.1% | 1.2% | 2.5% |
+| **2025** | **160** | **8.1%** | **7.5%** | **3.1%** | **74.4%** | **3.1%** | **1.2%** | **2.5%** |
 | 2024 | 394 | 12.4% | 8.1% | 2.5% | 62.7% | 3.8% | 5.6% | 4.8% |
 | 2023 | 761 | 18.0% | 11.4% | 7.9% | 46.6% | 6.2% | 5.8% | 4.1% |
 | 2022 | 420 | 32.4% | 9.5% | 7.9% | 32.4% | 7.4% | 4.5% | 6.0% |

@@ -10,6 +10,14 @@ Ironhack vend son bootcamp UX/UI sur l'insertion : *« ~90 % des diplômés en r
 
 ---
 
+## ⚠️ Dernière promotion avec des données — celle de 2025
+
+> **Sur les 160 diplômés UX/UI de 2025, seuls 8,1 % ont été recrutés comme designer ; 74,4 % n'ont jamais été placés ou sont encore en recherche.** 2025 est la dernière année avec des données significatives — les diplômés 2026 sont exclus (trop récents ; Ironhack n'a pas fini d'enregistrer leurs résultats).
+>
+> *Pour une comparaison stabilisée, la promotion 2023 (18+ mois de recul, n=761) n'atteint elle aussi que 18 % de recrutés dans le domaine — c'est donc un déclin durable, pas seulement des diplômés fraîchement sortis.*
+
+![La promotion 2025 (la cohorte UX/UI la plus récente d'Ironhack, n=160) : 74,4 % jamais placés ou encore en recherche, seulement 8,1 % recrutés comme designer.](assets/fr/06_class_2025.png)
+
 ## En bref
 
 | Indicateur (10 campus, n = 2 126 diplômés UX/UI) | Valeur |
@@ -92,7 +100,7 @@ Cohortes les plus récentes en premier :
 | Année | n | Dans le domaine | Pas comme designer | Freelance | Jamais placé | Quitté le domaine | Non diplômé | Stage |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | 2026 | 74 | 0,0 % | 4,1 % | 1,4 % | 91,9 % | 1,4 % | 0,0 % | 1,4 % |
-| 2025 | 160 | 8,1 % | 7,5 % | 3,1 % | 74,4 % | 3,1 % | 1,2 % | 2,5 % |
+| **2025** | **160** | **8,1 %** | **7,5 %** | **3,1 %** | **74,4 %** | **3,1 %** | **1,2 %** | **2,5 %** |
 | 2024 | 394 | 12,4 % | 8,1 % | 2,5 % | 62,7 % | 3,8 % | 5,6 % | 4,8 % |
 | 2023 | 761 | 18,0 % | 11,4 % | 7,9 % | 46,6 % | 6,2 % | 5,8 % | 4,1 % |
 | 2022 | 420 | 32,4 % | 9,5 % | 7,9 % | 32,4 % | 7,4 % | 4,5 % | 6,0 % |

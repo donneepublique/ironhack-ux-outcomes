@@ -10,6 +10,14 @@ Ironhack bewirbt sein UX/UI-Bootcamp über Vermittlung: *„~90 % der arbeitsuch
 
 ---
 
+## ⚠️ Jüngster Jahrgang mit Daten — der Abschlussjahrgang 2025
+
+> **Von den 160 UX/UI-Absolventen des Jahres 2025 wurden nur 8,1 % als Designer eingestellt; 74,4 % wurden nie vermittelt oder suchen noch.** 2025 ist das jüngste Jahr mit aussagekräftigen Daten — Absolventen von 2026 sind ausgeschlossen (zu aktuell; Ironhack hat deren Ergebnisse noch nicht vollständig erfasst).
+>
+> *Zum Vergleich mit gefestigten Daten: Der Jahrgang 2023 (18+ Monate her, n=761) erreichte ebenfalls nur 18 % im Fachgebiet — also ein anhaltender Rückgang, nicht bloß frische Absolventen.*
+
+![Der Jahrgang 2025 (Ironhacks jüngste UX/UI-Kohorte, n=160): 74,4 % nie vermittelt oder noch auf Suche, nur 8,1 % als Designer eingestellt.](assets/de/06_class_2025.png)
+
 ## Kurzfassung
 
 | Kennzahl (10 Standorte, n = 2.126 UX/UI-Absolventen) | Wert |
@@ -92,7 +100,7 @@ Neueste Kohorten zuerst:
 | Jahr | n | Im Fachgebiet | Nicht als Designer | Freiberuflich | Nie vermittelt | Fachgebiet verlassen | Nicht abgeschl. | Praktikum |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | 2026 | 74 | 0,0 % | 4,1 % | 1,4 % | 91,9 % | 1,4 % | 0,0 % | 1,4 % |
-| 2025 | 160 | 8,1 % | 7,5 % | 3,1 % | 74,4 % | 3,1 % | 1,2 % | 2,5 % |
+| **2025** | **160** | **8,1 %** | **7,5 %** | **3,1 %** | **74,4 %** | **3,1 %** | **1,2 %** | **2,5 %** |
 | 2024 | 394 | 12,4 % | 8,1 % | 2,5 % | 62,7 % | 3,8 % | 5,6 % | 4,8 % |
 | 2023 | 761 | 18,0 % | 11,4 % | 7,9 % | 46,6 % | 6,2 % | 5,8 % | 4,1 % |
 | 2022 | 420 | 32,4 % | 9,5 % | 7,9 % | 32,4 % | 7,4 % | 4,5 % | 6,0 % |
